@@ -1,0 +1,375 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{E405A505-7359-408C-B062-882A094A3D4A}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HumModWebSimulator</RootNamespace>
+    <AssemblyName>HumModWebSimulator</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>4.0</OldToolsVersion>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack">
+      <HintPath>..\packages\ServiceStack.3.9.69\lib\net35\ServiceStack.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Common">
+      <HintPath>..\packages\ServiceStack.Common.3.9.69\lib\net35\ServiceStack.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.Interfaces">
+      <HintPath>..\packages\ServiceStack.Common.3.9.69\lib\net35\ServiceStack.Interfaces.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite">
+      <HintPath>..\packages\ServiceStack.OrmLite.SqlServer.3.9.69\lib\net35\ServiceStack.OrmLite.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.OrmLite.SqlServer">
+      <HintPath>..\packages\ServiceStack.OrmLite.SqlServer.3.9.69\lib\net35\ServiceStack.OrmLite.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Redis">
+      <HintPath>..\packages\ServiceStack.Redis.3.9.69\lib\net35\ServiceStack.Redis.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.ServiceInterface">
+      <HintPath>..\packages\ServiceStack.3.9.69\lib\net35\ServiceStack.ServiceInterface.dll</HintPath>
+    </Reference>
+    <Reference Include="ServiceStack.Text">
+      <HintPath>..\packages\ServiceStack.Text.3.9.69\lib\net35\ServiceStack.Text.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="WebActivator">
+      <HintPath>..\packages\WebActivator.1.5.3\lib\net40\WebActivator.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\ChangePassword.aspx" />
+    <Content Include="Account\ChangePasswordSuccess.aspx" />
+    <Content Include="Account\Login.aspx" />
+    <Content Include="Account\Register.aspx" />
+    <None Include="CNAME">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+    <Content Include="Content\js\ss-validation.js" />
+    <Content Include="default.htm" />
+    <Content Include="README.txt" />
+    <Content Include="Scripts\codemirror.css" />
+    <Content Include="Scripts\codemirror.js" />
+    <Content Include="Scripts\createjs\easeljs-0.6.0.min.js" />
+    <Content Include="Scripts\createjs\easeljs-0.7.1.min.js" />
+    <Content Include="Scripts\createjs\loadflashjs.js" />
+    <Content Include="Scripts\createjs\movieclip-0.6.0.min.js" />
+    <Content Include="Scripts\createjs\movieclip-0.7.1.min.js" />
+    <Content Include="Scripts\createjs\preloadjs-0.3.0.min.js" />
+    <Content Include="Scripts\createjs\preloadjs-0.4.1.min.js" />
+    <Content Include="Scripts\createjs\tweenjs-0.4.0.min.js" />
+    <Content Include="Scripts\createjs\tweenjs-0.5.1.min.js" />
+    <Content Include="Scripts\dygraph\dashed-canvas.js" />
+    <Content Include="Scripts\dygraph\data.js" />
+    <Content Include="Scripts\dygraph\datahandler\bars-custom.js" />
+    <Content Include="Scripts\dygraph\datahandler\bars-error.js" />
+    <Content Include="Scripts\dygraph\datahandler\bars-fractions.js" />
+    <Content Include="Scripts\dygraph\datahandler\bars.js" />
+    <Content Include="Scripts\dygraph\datahandler\datahandler.js" />
+    <Content Include="Scripts\dygraph\datahandler\default-fractions.js" />
+    <Content Include="Scripts\dygraph\datahandler\default.js" />
+    <Content Include="Scripts\dygraph\dygraph-canvas.js" />
+    <Content Include="Scripts\dygraph\dygraph-dev.js" />
+    <Content Include="Scripts\dygraph\dygraph-exports.js" />
+    <Content Include="Scripts\dygraph\dygraph-externs.js" />
+    <Content Include="Scripts\dygraph\dygraph-gviz.js" />
+    <Content Include="Scripts\dygraph\dygraph-interaction-model.js" />
+    <Content Include="Scripts\dygraph\dygraph-internal.externs.js" />
+    <Content Include="Scripts\dygraph\dygraph-layout.js" />
+    <Content Include="Scripts\dygraph\dygraph-options-reference.js" />
+    <Content Include="Scripts\dygraph\dygraph-options.js" />
+    <Content Include="Scripts\dygraph\dygraph-plugin-base.js" />
+    <Content Include="Scripts\dygraph\dygraph-plugin-install.js" />
+    <Content Include="Scripts\dygraph\dygraph-tickers.js" />
+    <Content Include="Scripts\dygraph\dygraph-types.js" />
+    <Content Include="Scripts\dygraph\dygraph-utils.js" />
+    <Content Include="Scripts\dygraph\dygraph.js" />
+    <Content Include="Scripts\dygraph\excanvas.js" />
+    <Content Include="Scripts\dygraph\gviz-api.js" />
+    <Content Include="Scripts\dygraph\phantom-driver.js" />
+    <Content Include="Scripts\dygraph\phantom-perf.js" />
+    <Content Include="Scripts\dygraph\plugins\annotations.js" />
+    <Content Include="Scripts\dygraph\plugins\axes.js" />
+    <Content Include="Scripts\dygraph\plugins\chart-labels.js" />
+    <Content Include="Scripts\dygraph\plugins\grid.js" />
+    <Content Include="Scripts\dygraph\plugins\legend.js" />
+    <Content Include="Scripts\dygraph\plugins\range-selector.js" />
+    <Content Include="Scripts\dygraph\stacktrace.js" />
+    <Content Include="Scripts\GraphicsInteraction.js" />
+    <Content Include="Scripts\images\animated-overlay.gif" />
+    <Content Include="Scripts\images\ui-bg_diagonals-medium_20_d34d17_40x40.png" />
+    <Content Include="Scripts\images\ui-bg_diagonals-thick_75_f3d8d8_40x40.png" />
+    <Content Include="Scripts\images\ui-bg_diagonals-thick_90_eeeeee_40x40.png" />
+    <Content Include="Scripts\images\ui-bg_dots-small_65_a6a6a6_2x2.png" />
+    <Content Include="Scripts\images\ui-bg_flat_0_333333_40x100.png" />
+    <Content Include="Scripts\images\ui-bg_flat_15_cd0a0a_40x100.png" />
+    <Content Include="Scripts\images\ui-bg_flat_30_cccccc_40x100.png" />
+    <Content Include="Scripts\images\ui-bg_flat_50_5c5c5c_40x100.png" />
+    <Content Include="Scripts\images\ui-bg_flat_65_ffffff_40x100.png" />
+    <Content Include="Scripts\images\ui-bg_flat_75_aaaaaa_40x100.png" />
+    <Content Include="Scripts\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Scripts\images\ui-bg_glass_100_e4f1fb_1x400.png" />
+    <Content Include="Scripts\images\ui-bg_glass_100_f5f0e5_1x400.png" />
+    <Content Include="Scripts\images\ui-bg_glass_25_cb842e_1x400.png" />
+    <Content Include="Scripts\images\ui-bg_glass_50_3baae3_1x400.png" />
+    <Content Include="Scripts\images\ui-bg_glass_55_fbf8ee_1x400.png" />
+    <Content Include="Scripts\images\ui-bg_glass_70_ede4d4_1x400.png" />
+    <Content Include="Scripts\images\ui-bg_glass_80_d7ebf9_1x400.png" />
+    <Content Include="Scripts\images\ui-bg_gloss-wave_45_817865_500x100.png" />
+    <Content Include="Scripts\images\ui-bg_gloss-wave_60_fece2f_500x100.png" />
+    <Content Include="Scripts\images\ui-bg_gloss-wave_70_ffdd57_500x100.png" />
+    <Content Include="Scripts\images\ui-bg_gloss-wave_90_fff9e5_500x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-hard_100_eeeeee_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-hard_100_f2f5f7_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-hard_100_f4f0ec_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-hard_100_f6f6f6_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-hard_65_fee4bd_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-hard_70_000000_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-hard_75_f5f5b5_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-soft_100_deedf7_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-soft_100_feeebd_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-soft_15_cc0000_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_highlight-soft_25_ffef8f_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_inset-soft_100_f4f0ec_1x100.png" />
+    <Content Include="Scripts\images\ui-bg_inset-soft_30_ffffff_1x100.png" />
+    <Content Include="Scripts\images\ui-icons_004276_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_2694e8_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_3d3d3d_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_3d80b3_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_72a7cf_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_bd7b00_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_c47a23_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_cb672b_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_cc0000_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_d19405_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_eb990f_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_ed9f26_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_f08000_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_f35f07_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_fadc7a_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_ff7519_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_ffe180_256x240.png" />
+    <Content Include="Scripts\images\ui-icons_ffffff_256x240.png" />
+    <Content Include="Scripts\jquery-1.11.0.min.js" />
+    <Content Include="Scripts\simdocdsl.js" />
+    <Content Include="Scripts\excanvas.min.js" />
+    <Content Include="Scripts\jqplot.barRenderer.min.js" />
+    <Content Include="Scripts\jqplot.categoryAxisRenderer.min.js" />
+    <Content Include="Scripts\jqplot.pointLabels.min.js" />
+    <Content Include="Scripts\jquery.jqplot.js" />
+    <Content Include="Scripts\jquery.jqplot.min.js" />
+    <Content Include="Scripts\jquery.sparkline.js" />
+    <Content Include="Scripts\simappdsl.js" />
+    <Content Include="Scripts\SimAppInteraction.js" />
+    <Content Include="Scripts\hashset.js" />
+    <Content Include="Scripts\hashtable.js" />
+    <Content Include="Scripts\SimAppGraph.js" />
+    <Content Include="Scripts\javascript-tabs.css" />
+    <Content Include="Scripts\javascript-tabs.js" />
+    <Content Include="Scripts\jquery-1.9.1.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.js" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.css" />
+    <Content Include="Scripts\jquery-ui-1.10.3.custom.min.js" />
+    <Content Include="Scripts\jquery-ui.css" />
+    <Content Include="Scripts\jquery-ui.js" />
+    <Content Include="Scripts\jquery.handsontable.full.css" />
+    <Content Include="Scripts\jquery.handsontable.full.js" />
+    <Content Include="Scripts\SimAppParser.js" />
+    <Content Include="Scripts\SimAppParser.css" />
+    <Content Include="Scripts\srdce_real_hybajici2.js" />
+    <Content Include="Scripts\theme\3024-day.css" />
+    <Content Include="Scripts\theme\3024-night.css" />
+    <Content Include="Scripts\theme\ambiance-mobile.css" />
+    <Content Include="Scripts\theme\ambiance.css" />
+    <Content Include="Scripts\theme\base16-dark.css" />
+    <Content Include="Scripts\theme\base16-light.css" />
+    <Content Include="Scripts\theme\blackboard.css" />
+    <Content Include="Scripts\theme\cobalt.css" />
+    <Content Include="Scripts\theme\eclipse.css" />
+    <Content Include="Scripts\theme\elegant.css" />
+    <Content Include="Scripts\theme\erlang-dark.css" />
+    <Content Include="Scripts\theme\lesser-dark.css" />
+    <Content Include="Scripts\theme\midnight.css" />
+    <Content Include="Scripts\theme\monokai.css" />
+    <Content Include="Scripts\theme\neat.css" />
+    <Content Include="Scripts\theme\night.css" />
+    <Content Include="Scripts\theme\rubyblue.css" />
+    <Content Include="Scripts\theme\solarized.css" />
+    <Content Include="Scripts\theme\tomorrow-night-eighties.css" />
+    <Content Include="Scripts\theme\twilight.css" />
+    <Content Include="Scripts\theme\vibrant-ink.css" />
+    <Content Include="Scripts\theme\xq-dark.css" />
+    <Content Include="Scripts\theme\xq-light.css" />
+    <Content Include="Scripts\xml.js" />
+    <Content Include="Styles\Site.css" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\jquery-1.4.1-vsdoc.js" />
+    <Content Include="Scripts\jquery-1.4.1.js" />
+    <Content Include="Scripts\jquery-1.4.1.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="WebApp\GraphicElements.htm" />
+    <Content Include="WebApp\HumModBrowser.htm" />
+    <Content Include="WebApp\test.htm" />
+    <Content Include="WebApp\WebPage1.aspx" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Account\ChangePassword.aspx.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePassword.aspx.designer.cs">
+      <DependentUpon>ChangePassword.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\ChangePasswordSuccess.aspx.designer.cs">
+      <DependentUpon>ChangePasswordSuccess.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Login.aspx.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Login.aspx.designer.cs">
+      <DependentUpon>Login.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Account\Register.aspx.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Account\Register.aspx.designer.cs">
+      <DependentUpon>Register.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="App_Start\AppHost.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Model\ExternalDoc.cs" />
+    <Compile Include="Model\Graphic.cs" />
+    <Compile Include="Model\GraphicMetaService.cs" />
+    <Compile Include="Model\Models.cs" />
+    <Compile Include="Model\SimAppScreenMetasService.cs" />
+    <Compile Include="Model\SimAppScreenService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Site.Master.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Site.Master.designer.cs">
+      <DependentUpon>Site.Master</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Account\Web.config" />
+    <Content Include="Site.Master" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Properties\PublishProfiles\Profile1.pubxml" />
+    <None Include="Properties\PublishProfiles\Profile2.pubxml" />
+    <None Include="Scripts\dygraph\plugins\README" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51344</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51344/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
